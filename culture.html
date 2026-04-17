@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🌸 Discover Korean Culture — Full Pages</title>
+  <meta name="description" content="Full-page sections for K-pop, Places, Traditions, Festivals and Food — pastel theme" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg1:#f8d7f9;--bg2:#fcd1e6;--accent:#9b59b6;--card:#fff4fb;--text:#4b2c5e}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins','Noto Sans KR',sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);-webkit-font-smoothing:antialiased}
+    header{padding:28px 20px;text-align:center}
+    header h1{margin:0;color:#6e2fa8;font-size:32px;letter-spacing:0.4px}
+    header p{margin:8px 0 0;color:#7a3d82}
+
+    .container{max-width:1200px;margin:28px auto;padding:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .card{background:linear-gradient(180deg,var(--card),#fff);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(139,74,155,0.12);cursor:pointer;transition:transform .22s ease,box-shadow .22s ease}
+    .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(139,74,155,0.16)}
+    .card img{width:100%;height:140px;object-fit:cover;display:block}
+    .card-body{padding:12px}
+    .card h3{margin:6px 0;color:var(--accent);font-size:18px}
+    .card p{margin:6px 0 0;color:#5c3d5e;font-size:14px}
+
+    /* detail page layout */
+    .detail-panel{position:fixed;inset:40px;max-width:960px;margin:auto;left:0;right:0;border-radius:14px;background:linear-gradient(180deg,#fff9fc,#fff0fb);box-shadow:0 30px 80px rgba(107,35,106,0.24);overflow:auto;z-index:3000;opacity:0;transform:translateY(20px) scale(.99);transition:opacity .28s ease,transform .28s ease;display:none}
+    .detail-panel.open{display:block;opacity:1;transform:translateY(0) scale(1)}
+    .detail-header{padding:22px 24px;border-bottom:1px solid rgba(155,89,182,0.06);text-align:center}
+    .detail-header h2{margin:0;color:#6b1b9a;font-size:26px}
+    .detail-sub{color:#8b3a97;margin-top:6px}
+    .detail-body{padding:20px 28px;line-height:1.65;color:#41123e}
+    .detail-body h3{color:#7c1ca1;margin-top:16px}
+    .detail-footer{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-top:1px solid rgba(155,89,182,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02))}
+    .btn{padding:10px 14px;border-radius:12px;border:none;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg,#e9a9e2,#d6a0ea);color:#fff;box-shadow:0 8px 22px rgba(155,89,182,0.12)}
+    .btn-ghost{background:transparent;color:var(--accent);border:1px solid rgba(124,28,161,0.09)}
+
+    /* responsive */
+    @media (max-width:900px){.detail-panel{inset:14px;border-radius:12px;padding:0}.detail-header h2{font-size:20px}}
+
+    /* page content sections (in-page full pages) */
+    .fullpage{display:none;padding:28px;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(139,74,155,0.06);margin-bottom:20px}
+    .fullpage.open{display:block}
+    .banner{height:220px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center;margin-bottom:18px}
+    .meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+    .meta .tag{background:linear-gradient(135deg,#ffe9fb,#fbe9ff);padding:6px 10px;border-radius:999px;color:#8b3a97;font-weight:700}
+    .columns{display:grid;grid-template-columns:1fr 320px;gap:22px}
+    .sidebar{background:linear-gradient(180deg,#fff4fb,#fff0ff);padding:14px;border-radius:10px}
+    .sidebar h4{margin:0 0 8px;color:#6a1b9a}
+    .sidebar p{margin:0;color:#5b3b63}
+    .content p{margin:10px 0}
+
+    @media (max-width:980px){.columns{grid-template-columns:1fr}}
+
+    /* smooth anchor & print friendly */
+    html{scroll-behavior:smooth}
+    @media print{body{background:#fff}header, .grid, .card, .btn, .detail-panel{display:none} .fullpage{display:block}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌸 Discover Korean Culture</h1>
+    <p>Click any card to open a full-page section with history, instruments, highlights and fun facts.</p>
+  </header>
+
+  <main class="container">
+    <!-- Navigation links to main categories -->
+    <section style="margin-bottom:18px;text-align:center">
+      <a href="#kpop" class="btn btn-ghost" style="margin-right:8px">K-Pop</a>
+      <a href="#places" class="btn btn-ghost" style="margin-right:8px">Places</a>
+      <a href="#traditions" class="btn btn-ghost" style="margin-right:8px">Traditions & Arts</a>
+      <a href="#festivals" class="btn btn-ghost" style="margin-right:8px">Festivals</a>
+    
+    </section>
+
+    <!-- K-POP CARDS -->
+    <section id="kpop">
+      <h2 style="color:#6e2fa8;margin-bottom:8px">🎵 K-Pop Sensations</h2>
+      <p style="color:#7a3d82;margin-bottom:14px">Profiles, history and cultural impact of major groups.</p>
+      <div class="grid">
+        <div class="card" data-key="BTS"><img src="assets/images/bts.png.jpg" alt="BTS"><div class="card-body"><h3>BTS</h3><p>Message-driven global superstars.</p></div></div>
+        <div class="card" data-key="BLACKPINK"><img src="assets/images/blackpink.png.jpg" alt="BLACKPINK"><div class="card-body"><h3>BLACKPINK</h3><p>Fashion-forward global girl group.</p></div></div>
+        <div class="card" data-key="EXO"><img src="assets/images/exo.png.jpg" alt="EXO"><div class="card-body"><h3>EXO</h3><p>Second-generation powerhouse.</p></div></div>
+        <div class="card" data-key="TWICE"><img src="assets/images/twice.png.jpg" alt="TWICE"><div class="card-body"><h3>TWICE</h3><p>Catchy pop and pan-Asian appeal.</p></div></div>
+        <div class="card" data-key="SEVENTEEN"><img src="assets/images/seventeen.jpg" alt="SEVENTEEN"><div class="card-body"><h3>SEVENTEEN</h3><p>Self-producing teamwork.</p></div></div>
+        <div class="card" data-key="STRAY_KIDS"><img src="assets/images/straykids.jpg" alt="STRAY KIDS"><div class="card-body"><h3>STRAY KIDS</h3><p>Self-made rebels of K-pop.</p></div></div>
+      </div>
+    </section>
+
+    <hr style="border:none;border-top:1px dashed rgba(226,183,243,0.6);margin:26px 0">
+
+    <!-- Places -->
+    <section id="places">
+      <h2 style="color:#6e2fa8;margin-bottom:8px">🏯 Places & Landmarks</h2>
+      <p style="color:#7a3d82;margin-bottom:14px">Palaces, temples and living neighborhoods.</p>
+      <div class="grid">
+        <div class="card" data-key="Gyeongbokgung"><img src="assets/images/gyeongbokgung.jpg" alt="Gyeongbokgung"><div class="card-body"><h3>Gyeongbokgung</h3><p>Main Joseon royal palace.</p></div></div>
+        <div class="card" data-key="Changdeokgung"><img src="assets/images/changdeokgung.jpg" alt="Changdeokgung"><div class="card-body"><h3>Changdeokgung</h3><p>UNESCO: Secret Garden.</p></div></div>
+        <div class="card" data-key="BukchonHanok"><img src="assets/images/bukchon.jpg" alt="Bukchon"><div class="card-body"><h3>Bukchon Hanok</h3><p>Traditional hanok neighborhood.</p></div></div>
+        <div class="card" data-key="HwaseongFortress"><img src="assets/images/hwaseong.jpg" alt="Hwaseong"><div class="card-body"><h3>Hwaseong Fortress</h3><p>Suwon's defensive wall.</p></div></div>
+        <div class="card" data-key="JongmyoShrine"><img src="assets/images/jongmyo.jpg" alt="Jongmyo"><div class="card-body"><h3>Jongmyo Shrine</h3><p>Royal ancestral rites.</p></div></div>
+        <div class="card" data-key="HaeinsaTemple"><img src="assets/images/haeinsa.jpg" alt="Haeinsa"><div class="card-body"><h3>Haeinsa Temple</h3><p>Tripitaka Koreana woodblocks.</p></div></div>
+      </div>
+    </section>
+
+    <hr style="border:none;border-top:1px dashed rgba(226,183,243,0.6);margin:26px 0">
+
+    <!-- Traditions & Arts -->
+    <section id="traditions">
+      <h2 style="color:#6e2fa8;margin-bottom:8px">🎭 Traditions & Arts</h2>
+      <p style="color:#7a3d82;margin-bottom:14px">Dress, music, dance, craft and tea culture.</p>
+      <div class="grid">
+        <div class="card" data-key="Hanbok"><img src="assets/images/hanbok.jpg" alt="Hanbok"><div class="card-body"><h3>Hanbok</h3><p>Korea's flowing traditional dress.</p></div></div>
+        <div class="card" data-key="Hanok"><img src="assets/images/hanok.jpg" alt="Hanok"><div class="card-body"><h3>Hanok</h3><p>Traditional house & ondol.</p></div></div>
+        <div class="card" data-key="TeaCeremony"><img src="assets/images/teaceremony.jpg" alt="Tea"><div class="card-body"><h3>Dado (Tea)</h3><p>Mindful tea rituals.</p></div></div>
+        <div class="card" data-key="Gugak"><img src="assets/images/gugak.jpg" alt="Gugak"><div class="card-body"><h3>Gugak</h3><p>Traditional Korean music.</p></div></div>
+        <div class="card" data-key="FolkDance"><img src="assets/images/fandance.jpg" alt="Dance"><div class="card-body"><h3>Folk Dance</h3><p>Mask & fan dances.</p></div></div>
+        <div class="card" data-key="Calligraphy"><img src="assets/images/calligraphy.jpg" alt="Calligraphy"><div class="card-body"><h3>Calligraphy</h3><p>Brush art & literati.</p></div></div>
+      </div>
+    </section>
+
+    <hr style="border:none;border-top:1px dashed rgba(226,183,243,0.6);margin:26px 0">
+
+    <!-- Festivals -->
+    <section id="festivals">
+      <h2 style="color:#6e2fa8;margin-bottom:8px">🎉 Festivals & Rituals</h2>
+      <p style="color:#7a3d82;margin-bottom:14px">Seasonal rites and communal celebrations.</p>
+      <div class="grid">
+        <div class="card" data-key="Chuseok"><img src="assets/images/chuseok.jpg" alt="Chuseok"><div class="card-body"><h3>Chuseok</h3><p>Harvest & ancestor remembrance.</p></div></div>
+        <div class="card" data-key="Seollal"><img src="assets/images/seollal.jpg" alt="Seollal"><div class="card-body"><h3>Seollal</h3><p>Lunar New Year traditions.</p></div></div>
+        <div class="card" data-key="LotusLantern"><img src="assets/images/lotuslantern.jpg" alt="Lotus"><div class="card-body"><h3>Lotus Lantern</h3><p>Buddha's birthday parades.</p></div></div>
+        <div class="card" data-key="Dano"><img src="assets/images/dano.jpg" alt="Dano"><div class="card-body"><h3>Dano</h3><p>Welcoming summer rituals.</p></div></div>
+      </div>
+    </section>
+
+    <hr style="border:none;border-top:1px dashed rgba(226,183,243,0.6);margin:26px 0">
+
+    
+    </section>
+
+    <div style="height:48px"></div>
+
+    <!-- Embedded full-page sections (hidden, revealed when card clicked) -->
+    <article id="detailPanel" class="detail-panel" role="dialog" aria-hidden="true">
+      <div class="detail-header">
+        <button id="closeDetail" class="btn" style="position:absolute;left:18px;top:18px;background:transparent;font-size:20px;color:#e91e63">✕</button>
+        <h2 id="detailTitle">Title</h2>
+        <div id="detailSub" class="detail-sub">subtitle</div>
+      </div>
+      <div class="detail-body" id="detailBody" tabindex="0"></div>
+      <div class="detail-footer">
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="prevDetail" class="btn btn-ghost">◀ Previous</button>
+          <button id="nextDetail" class="btn btn-ghost">Next ▶</button>
+          <span id="detailPage" style="color:#6b207b;font-weight:700"></span>
+        </div>
+        <div>
+          <button id="openFullPage" class="btn btn-primary">Open Full Page</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Individual full pages (printable, can be opened via Open Full Page) -->
+    <section id="fullpages" style="margin-top:18px">
+      <!-- Example full page markup for BTS (others follow same pattern) -->
+
+      <div id="page-BTS" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/bts_banner.jpg')"></div>
+        <div class="meta"><div class="tag">K-Pop · Group</div><div style="flex:1"></div><div class="tag">Debut: 2013</div></div>
+        <div class="columns">
+          <div class="content">
+            <h2>BTS (방탄소년단)</h2>
+            <h4 style="color:#7c1ca1;margin-top:6px">Message-driven global superstars</h4>
+            <p><strong>Formation & Members:</strong> Debuted June 13, 2013 under BigHit (now HYBE). Members: RM, Jin, Suga, J-Hope, Jimin, V, Jungkook.</p>
+            <h3>Global Breakthrough</h3>
+            <p>From 2017, BTS topped global charts, bringing K-pop mainstream recognition in the West. Key albums include "Love Yourself" and "Map of the Soul".</p>
+            <h3>Impact & Legacy</h3>
+            <p>BTS influenced global fashion, tourism, and social conversations. Their fandom ARMY engages in charity and activism.</p>
+            <h3>Fun Facts</h3>
+            <ul><li>Spoke at the UN multiple times.</li><li>Multiple Billboard Hot 100 hits.</li><li>Each member has active solo projects.</li></ul>
+          </div>
+          <aside class="sidebar">
+            <h4>Quick Facts</h4>
+            <p>Style: Pop / Hip-hop / R&amp;B</p>
+            <p>Notable songs: Dynamite, Butter, Spring Day</p>
+            <p>Fandom: ARMY</p>
+          </aside>
+        </div>
+      </div>
+
+      <!-- (Other full pages - abbreviated content for brevity here; you can expand later) -->
+      <!-- BLACKPINK -->
+      <div id="page-BLACKPINK" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/blackpink_banner.jpg')"></div>
+        <div class="meta"><div class="tag">K-Pop · Girl Group</div><div style="flex:1"></div><div class="tag">Debut: 2016</div></div>
+        <div class="columns">
+          <div class="content">
+            <h2>BLACKPINK (블랙핑크)</h2>
+            <h4 style="color:#7c1ca1;margin-top:6px">Fashion-forward global girl group</h4>
+            <p>Members: Jisoo, Jennie, Rosé, Lisa. Known for high-fashion collaborations and global tours.</p>
+            <h3>Achievements</h3>
+            <p>First K-pop girl group at Coachella; strong commercial partnerships in fashion and beauty.</p>
+            <h3>Fun Facts</h3>
+            <ul><li>Consistent YouTube record holders.</li><li>Solo projects with major luxury brands.</li></ul>
+          </div>
+          <aside class="sidebar"><h4>Quick Facts</h4><p>Style: Pop / EDM</p><p>Fandom: BLINK</p></aside>
+        </div>
+      </div>
+
+      <!-- EXO -->
+      <div id="page-EXO" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/exo_banner.jpg')"></div>
+        <div class="meta"><div class="tag">K-Pop · Group</div><div style="flex:1"></div><div class="tag">Debut: 2012</div></div>
+        <div class="columns"><div class="content"><h2>EXO</h2><h3>Origins & Style</h3><p>EXO debuted with a dual-language concept (K/CH) and became a loud presence across Asia.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Fandom: EXO-L</p></aside></div>
+      </div>
+
+      <!-- TWICE -->
+      <div id="page-TWICE" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/twice_banner.jpg')"></div>
+        <div class="meta"><div class="tag">K-Pop · Girl Group</div><div style="flex:1"></div><div class="tag">Debut: 2015</div></div>
+        <div class="columns"><div class="content"><h2>TWICE</h2><p>Known for catchy melodies and cross-Asian appeal. Members: Nayeon, Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, Tzuyu.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Fandom: ONCE</p></aside></div>
+      </div>
+
+      <!-- SEVENTEEN -->
+      <div id="page-SEVENTEEN" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/seventeen_banner.jpg')"></div>
+        <div class="meta"><div class="tag">K-Pop · Group</div><div style="flex:1"></div><div class="tag">Debut: 2015</div></div>
+        <div class="columns"><div class="content"><h2>SEVENTEEN</h2><p>13 members in sub-units: Vocal, Performance, Hip-hop. Self-producing idols known for choreography.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Fandom: CARAT</p></aside></div>
+      </div>
+
+      <!-- STRAY KIDS -->
+      <div id="page-STRAY_KIDS" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/straykids_banner.jpg')"></div>
+        <div class="meta"><div class="tag">K-Pop · Group</div><div style="flex:1"></div><div class="tag">Debut: 2018</div></div>
+        <div class="columns"><div class="content"><h2>STRAY KIDS</h2><p>Self-made group with an in-house production unit (3RACHA). Known for energetic performances and authenticity.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Fandom: STAY</p></aside></div>
+      </div>
+
+      <!-- Places full pages -->
+      <div id="page-Gyeongbokgung" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/gyeongbokgung_large.jpg')"></div>
+        <div class="meta"><div class="tag">Place · Palace</div><div style="flex:1"></div><div class="tag">Built: 1395</div></div>
+        <div class="columns"><div class="content"><h2>Gyeongbokgung Palace</h2><p>Built in 1395 during the Joseon dynasty — Geunjeongjeon throne hall is a highlight. Visit for the Royal Guard Changing Ceremony and the National Folk Museum.</p><h3>Architecture & Meaning</h3><p>Symmetry, colors, and Confucian spatial order emphasize royal authority and harmony.</p></div><aside class="sidebar"><h4>Visitor Tips</h4><p>Wear comfortable shoes; consider a guided tour for the Secret Garden insights.</p></aside></div>
+      </div>
+
+      <div id="page-Changdeokgung" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/changdeokgung_large.jpg')"></div>
+        <div class="meta"><div class="tag">Place · Palace</div><div style="flex:1"></div><div class="tag">UNESCO Site</div></div>
+        <div class="columns"><div class="content"><h2>Changdeokgung Palace</h2><p>Renowned for its Secret Garden — the Huwon — the palace blends architecture with natural topography.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Built: 1405</p></aside></div>
+      </div>
+
+      <div id="page-BukchonHanok" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/bukchon_large.jpg')"></div>
+        <div class="meta"><div class="tag">Place · Village</div><div style="flex:1"></div><div class="tag">Living Heritage</div></div>
+        <div class="columns"><div class="content"><h2>Bukchon Hanok Village</h2><p>A living neighborhood of traditional hanok homes between palaces — try hanbok rental for photos and explore artisan workshops.</p></div><aside class="sidebar"><h4>Visitor Tips</h4><p>Respect residents; many alleys are private property.</p></aside></div>
+      </div>
+
+      <div id="page-HwaseongFortress" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/hwaseong_large.jpg')"></div>
+        <div class="meta"><div class="tag">Place · Fortress</div><div style="flex:1"></div><div class="tag">18th c.</div></div>
+        <div class="columns"><div class="content"><h2>Hwaseong Fortress</h2><p>Constructed under King Jeongjo; reflects innovative military architecture of the Joseon era.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>UNESCO listed</p></aside></div>
+      </div>
+
+      <div id="page-JongmyoShrine" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/jongmyo_large.jpg')"></div>
+        <div class="meta"><div class="tag">Place · Shrine</div><div style="flex:1"></div><div class="tag">Ritual Music</div></div>
+        <div class="columns"><div class="content"><h2>Jongmyo Shrine</h2><p>Dedicated to royal ancestral rites; the Jongmyo Jerye ritual and music are UNESCO-listed for their cultural importance.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Quiet, solemn architecture.</p></aside></div>
+      </div>
+
+      <div id="page-HaeinsaTemple" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/haeinsa_large.jpg')"></div>
+        <div class="meta"><div class="tag">Place · Temple</div><div style="flex:1"></div><div class="tag">Tripitaka Koreana</div></div>
+        <div class="columns"><div class="content"><h2>Haeinsa Temple</h2><p>Home of the Tripitaka Koreana woodblocks — a monumental Buddhist scholarly achievement.</p></div><aside class="sidebar"><h4>Visitor Tips</h4><p>Consider quiet reflection and temple etiquette.</p></aside></div>
+      </div>
+
+      <!-- Traditions pages: Hanbok, Hanok, Tea, Gugak, FolkDance, Calligraphy -->
+      <div id="page-Hanbok" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/hanbok_banner.jpg')"></div>
+        <div class="meta"><div class="tag">Tradition · Dress</div><div style="flex:1"></div><div class="tag">Ancient Roots</div></div>
+        <div class="columns"><div class="content"><h2>Hanbok</h2><p>Characterized by flowing lines and color symbolism. Components: jeogori (jacket), chima (skirt), baji (pants).</p><h3>Modern Revival</h3><p>Designers reinvent hanbok for weddings, festivals, and everyday wear with modern materials.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Symbolic colors & occasions.</p></aside></div>
+      </div>
+
+      <div id="page-Hanok" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/hanok_large.jpg')"></div>
+        <div class="meta"><div class="tag">Tradition · Architecture</div><div style="flex:1"></div><div class="tag">Ondol Heating</div></div>
+        <div class="columns"><div class="content"><h2>Hanok</h2><p>Traditional houses built with wood, clay tiles, and ondol underfloor heating — designed to harmonize with seasons and the site.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Stay at restored hanok guesthouses for an immersive experience.</p></aside></div>
+      </div>
+
+      <div id="page-TeaCeremony" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/tea_banner.jpg')"></div>
+        <div class="meta"><div class="tag">Tradition · Ritual</div><div style="flex:1"></div><div class="tag">Dado</div></div>
+        <div class="columns"><div class="content"><h2>Korean Tea Ceremony (Dado)</h2><p>Dado emphasizes calmness, respect and savoring — often held in hanok tea houses with seasonal teas.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Focus on mindfulness and hospitality.</p></aside></div>
+      </div>
+
+      <div id="page-Gugak" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/gugak_banner.jpg')"></div>
+        <div class="meta"><div class="tag">Tradition · Music</div><div style="flex:1"></div><div class="tag">Pansori · Samulnori</div></div>
+        <div class="columns"><div class="content"><h2>Gugak (국악)</h2>
+          <p><strong>Essence:</strong> Traditional Korean music covering both court (jeongak) and folk forms. Includes pansori (narrative vocal art), sanjo (instrumental solo), and samulnori (percussion ensemble).</p>
+          <h3>Instruments</h3>
+          <p>Gayageum (zither), geomungo, daegeum (bamboo flute), janggu (hourglass drum), buk (barrel drum), piri (reed instrument).</p>
+          <h3>Preservation & Today</h3>
+          <p>Taught in conservatories, reinterpreted by modern composers, and performed at national festivals.</p>
+        </div>
+        <aside class="sidebar"><h4>Quick Facts</h4><p>Genres: Pansori, Sanjo, Jeongak, Minyo (folk songs)</p></aside></div>
+      </div>
+
+      <div id="page-FolkDance" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/fandance_banner.jpg')"></div>
+        <div class="meta"><div class="tag">Tradition · Dance</div><div style="flex:1"></div><div class="tag">Buchaechum · Talchum</div></div>
+        <div class="columns"><div class="content"><h2>Korean Folk Dance</h2><p>Buchaechum (fan dance), talchum (mask dance) — dances communicate stories, satire and communal values.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Often performed at festivals and stages.</p></aside></div>
+      </div>
+
+      <div id="page-Calligraphy" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/calligraphy_banner.jpg')"></div>
+        <div class="meta"><div class="tag">Tradition · Art</div><div style="flex:1"></div><div class="tag">Brush & Ink</div></div>
+        <div class="columns"><div class="content"><h2>Calligraphy & Painting</h2><p>Brush technique expresses spirit and discipline; often paired with landscape painting and poetry.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Learned in literati traditions.</p></aside></div>
+      </div>
+
+      <!-- Festivals -->
+      <div id="page-Chuseok" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/chuseok_large.jpg')"></div>
+        <div class="meta"><div class="tag">Festival · Harvest</div><div style="flex:1"></div><div class="tag">Lunar</div></div>
+        <div class="columns"><div class="content"><h2>Chuseok</h2><p>Major harvest festival honoring ancestors. Families visit graves, perform rites, and share special foods like songpyeon.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>15th day of the 8th lunar month</p></aside></div>
+      </div>
+
+      <div id="page-Seollal" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/seollal_large.jpg')"></div>
+        <div class="meta"><div class="tag">Festival · New Year</div><div style="flex:1"></div><div class="tag">Lunar</div></div>
+        <div class="columns"><div class="content"><h2>Seollal</h2><p>Lunar New Year — family reunions, ancestral bows (sebae), and tteokguk soup symbolizing a new age.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Traditional games and hanbok are common.</p></aside></div>
+      </div>
+
+      <div id="page-LotusLantern" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/lotuslantern_large.jpg')"></div>
+        <div class="meta"><div class="tag">Festival · Buddhist</div><div style="flex:1"></div><div class="tag">Lanterns</div></div>
+        <div class="columns"><div class="content"><h2>Lotus Lantern Festival</h2><p>Colorful lantern parades and temple ceremonies celebrating Buddha's birth; public lantern-making and illuminated processions.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>Participate in lantern workshops.</p></aside></div>
+      </div>
+
+      <div id="page-Dano" class="fullpage" aria-hidden="true">
+        <div class="banner" style="background-image:url('assets/images/dano_large.jpg')"></div>
+        <div class="meta"><div class="tag">Festival · Seasonal</div><div style="flex:1"></div><div class="tag">May/June</div></div>
+        <div class="columns"><div class="content"><h2>Dano</h2><p>Welcoming summer with hair-washing rituals using iris water, traditional games like ssireum (wrestling), and swings.</p></div><aside class="sidebar"><h4>Quick Facts</h4><p>5th day of the 5th lunar month</p></aside></div>
+      </div>
+
+     
+
+    </section>
+
+  </main>
+
+  <script>
+    // Data-driven order for prev/next navigation
+    const keysOrder = [
+      'BTS','BLACKPINK','EXO','TWICE','SEVENTEEN','STRAY_KIDS',
+      'Gyeongbokgung','Changdeokgung','BukchonHanok','HwaseongFortress','JongmyoShrine','HaeinsaTemple',
+      'Hanbok','Hanok','TeaCeremony','Gugak','FolkDance','Calligraphy',
+      'Chuseok','Seollal','LotusLantern','Dano',
+    ];
+
+    // Attach click handlers to cards
+    document.querySelectorAll('.card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        const key = card.dataset.key;
+        openDetail(key);
+      });
+    });
+
+    const detailPanel = document.getElementById('detailPanel');
+    const detailTitle = document.getElementById('detailTitle');
+    const detailSub = document.getElementById('detailSub');
+    const detailBody = document.getElementById('detailBody');
+    const closeDetail = document.getElementById('closeDetail');
+    const prevDetail = document.getElementById('prevDetail');
+    const nextDetail = document.getElementById('nextDetail');
+    const detailPage = document.getElementById('detailPage');
+    const openFullPage = document.getElementById('openFullPage');
+
+    // content map (short summary used in panel). Keep in sync with full page IDs.
+    const summaryData = {
+     // 🎵 K-pop section
+// 🎵 K-pop section – Enhanced full version
+BTS: {
+  title: 'BTS (방탄소년단)',
+  sub: 'Message-driven global superstars',
+  pages: [
+    `<h3>Formation & Members</h3>
+    <p><strong>Debut:</strong> June 13, 2013, under Big Hit Entertainment.</p>
+    <p><strong>Members:</strong> RM (leader), Jin, Suga, J-Hope, Jimin, V, Jungkook.</p>
+    <p>BTS started as a small hip-hop group and rose to become one of the world’s most influential music acts. Their name, <em>Bangtan Sonyeondan</em>, translates to "Bulletproof Boy Scouts," symbolizing resilience against social pressures.</p>`,
+
+    `<h3>Musical Evolution</h3>
+    <p>Their early albums explored youth struggles (“No More Dream”, “N.O”), while later works like <em>WINGS</em> and <em>Map of the Soul</em> delved into self-discovery and psychology. BTS pioneered the idea of concept-linked storytelling across albums and eras.</p>`,
+
+    `<h3>Global Impact</h3>
+    <p>They redefined global pop culture, becoming the first Korean act to reach No.1 on the Billboard Hot 100 with “Dynamite” and “Butter.” BTS addressed global issues at the United Nations and inspired a generation through their message of self-love and mental health awareness.</p>`,
+
+    `<h3>Major Awards</h3>
+    <ul>
+      <li>Billboard Music Awards — Top Social Artist (2017–2022)</li>
+      <li>American Music Awards — Artist of the Year (2021)</li>
+      <li>MTV VMAs — Best Group, Best K-pop</li>
+      <li>TIME Magazine’s “Entertainer of the Year” (2020)</li>
+      <li>Multiple Daesangs at MAMA, Melon, and Golden Disc Awards</li>
+    </ul>`,
+
+    `<h3>Signature Songs</h3>
+    <ul>
+      <li>“Blood Sweat & Tears” — Artistic storytelling</li>
+      <li>“Spring Day” — Symbol of comfort and healing</li>
+      <li>“Dynamite” & “Butter” — Global pop anthems</li>
+      <li>“Yet To Come” — Tribute to their journey</li>
+    </ul>`
+  ]
+},
+
+BLACKPINK: {
+  title: 'BLACKPINK (블랙핑크)',
+  sub: 'Fashion-forward global girl group',
+  pages: [
+    `<h3>Formation & Members</h3>
+    <p><strong>Debut:</strong> August 8, 2016 under YG Entertainment.</p>
+    <p><strong>Members:</strong> Jisoo, Jennie, Rosé, Lisa.</p>
+    <p>BLACKPINK became known for their confident image, blending fierce rap verses with glamorous visuals and global pop production.</p>`,
+
+    `<h3>Musical Identity</h3>
+    <p>The group’s signature sound mixes EDM, trap, and pop. Songs like “DDU-DU DDU-DU” and “Kill This Love” exemplify empowerment and independence.</p>
+    <p>They are also global trendsetters, influencing beauty and fashion across Asia, Europe, and America.</p>`,
+
+    `<h3>Achievements & Awards</h3>
+    <ul>
+      <li>First K-pop girl group to perform at <strong>Coachella</strong> (2019, headliners in 2023)</li>
+      <li>YouTube: Over 90 million subscribers — world’s top music channel</li>
+      <li>Guinness World Records for fastest-viewed videos (“How You Like That”)</li>
+      <li>MTV VMA winners for Best Metaverse Performance</li>
+    </ul>`,
+
+    `<h3>Influence & Endorsements</h3>
+    <p>Each member represents luxury fashion houses: Jisoo (Dior), Jennie (Chanel), Rosé (YSL), and Lisa (Celine). They bridge Korean and Western pop culture effortlessly.</p>`,
+
+    `<h3>Popular Songs</h3>
+    <ul>
+      <li>“Boombayah” — Debut anthem</li>
+      <li>“Kill This Love” — Global hit with 1.7B views</li>
+      <li>“Pink Venom” — Fusion of traditional Korean elements and modern beats</li>
+      <li>“Shut Down” — Sophisticated hip-hop sample of classical violin</li>
+    </ul>`
+  ]
+},
+
+EXO: {
+  title: 'EXO (엑소)',
+  sub: 'Second-generation powerhouse',
+  pages: [
+    `<h3>Formation</h3>
+    <p><strong>Debut:</strong> April 8, 2012 under SM Entertainment.</p>
+    <p>Initially divided into EXO-K (Korean) and EXO-M (Mandarin) subunits, they pioneered the twin-group concept aimed at both Korean and Chinese markets.</p>`,
+
+    `<h3>Members</h3>
+    <p>Active members include Suho, Xiumin, Baekhyun, Chen, Chanyeol, D.O., Kai, and Sehun.</p>
+    <p>Former members Kris, Luhan, and Tao departed in earlier years.</p>`,
+
+    `<h3>Achievements</h3>
+    <ul>
+      <li>Over 12 million albums sold — one of Korea’s highest-selling groups</li>
+      <li>“Growl” became a national phenomenon (2013)</li>
+      <li>Multiple “Album of the Year” awards at MAMA and Golden Disc</li>
+      <li>Billboard ranked them among the top K-pop acts of the 2010s</li>
+    </ul>`,
+
+    `<h3>Signature Songs</h3>
+    <ul>
+      <li>“Growl” — defining 2010s hit</li>
+      <li>“Call Me Baby” — pop perfection</li>
+      <li>“Love Shot” — sultry and iconic</li>
+    </ul>`
+  ]
+},
+
+TWICE: {
+  title: 'TWICE (트와이스)',
+  sub: 'Catchy pop energy',
+  pages: [
+    `<h3>Formation & Concept</h3>
+    <p><strong>Debut:</strong> October 20, 2015 under JYP Entertainment.</p>
+    <p>TWICE was formed through the survival show <em>Sixteen</em>. Their concept centers around bright, catchy, and positive energy that connects with fans worldwide.</p>`,
+
+    `<h3>Members</h3>
+    <p>Nayeon, Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, and Tzuyu.</p>`,
+
+    `<h3>Achievements</h3>
+    <ul>
+      <li>First girl group to surpass 10 million album sales in Korea & Japan</li>
+      <li>Known as “Asia’s top girl group” with concerts sold out globally</li>
+      <li>Over 20 music show wins for their hit “Cheer Up” alone</li>
+    </ul>`,
+
+    `<h3>Signature Songs</h3>
+    <ul>
+      <li>“Cheer Up” — viral catchphrase “Shy Shy Shy”</li>
+      <li>“TT” — global breakthrough song</li>
+      <li>“Feel Special” — empowering message</li>
+      <li>“Talk That Talk” — 2022 modern synth-pop comeback</li>
+    </ul>`
+  ]
+},
+
+SEVENTEEN: {
+  title: 'SEVENTEEN (세븐틴)',
+  sub: 'Self-producing idols',
+  pages: [
+    `<h3>Formation</h3>
+    <p><strong>Debut:</strong> May 26, 2015 under Pledis Entertainment (now part of HYBE).</p>
+    <p>Composed of <strong>13 members</strong> split into 3 sub-units: Hip-Hop, Vocal, and Performance teams. They are known for creating their own choreography and music.</p>`,
+
+    `<h3>Members</h3>
+    <p>S.Coups, Jeonghan, Joshua, Jun, Hoshi, Wonwoo, Woozi, DK, Mingyu, The8, Seungkwan, Vernon, and Dino.</p>`,
+
+    `<h3>Achievements</h3>
+    <ul>
+      <li>First self-producing idol group to achieve multi-million album sales</li>
+      <li>Album “FML” (2023) became one of Korea’s best-selling albums ever</li>
+      <li>Known for synchronization and teamwork in performances</li>
+    </ul>`,
+
+    `<h3>Signature Songs</h3>
+    <ul>
+      <li>“Very Nice (아주 NICE)”</li>
+      <li>“Don’t Wanna Cry”</li>
+      <li>“Super” — 2023 performance powerhouse</li>
+    </ul>`
+  ]
+},
+
+STRAY_KIDS: {
+  title: 'Stray Kids (스트레이 키즈)',
+  sub: 'Self-made rebels',
+  pages: [
+    `<h3>Formation</h3>
+    <p><strong>Debut:</strong> March 25, 2018 under JYP Entertainment.</p>
+    <p>Formed through the survival show <em>Stray Kids</em>, the group emphasizes creative freedom and self-expression. Their name represents being “lost” but finding your own path.</p>`,
+
+    `<h3>Members</h3>
+    <p>Bang Chan (leader), Lee Know, Changbin, Hyunjin, Han, Felix, Seungmin, I.N.</p>
+    <p>They are known for intense performances and self-written music through their subunit <strong>3RACHA</strong> (Bang Chan, Changbin, Han).</p>`,
+
+    `<h3>Achievements</h3>
+    <ul>
+      <li>Billboard 200 #1 albums: “Oddinary” (2022), “5-Star” (2023)</li>
+      <li>MTV EMAs — Best K-pop (2023)</li>
+      <li>Asia Artist Awards — Performance of the Year</li>
+      <li>Known for “NOEASY” and “God’s Menu” defining 4th-gen K-pop</li>
+    </ul>`,
+
+    `<h3>Musical Style</h3>
+    <p>Stray Kids' music blends EDM, trap, and experimental hip-hop with raw emotional lyrics. Their slogan “Step out of the ordinary” reflects their rebellious authenticity.</p>`
+  ]
+}
+
+,
+      // 🌸 Places & Landmarks – Enhanced full data
+Gyeongbokgung: {
+  title: 'Gyeongbokgung Palace (경복궁)',
+  sub: 'Palace of Shining Happiness',
+  pages: [
+    `<h3>History</h3>
+    <p>Built in <strong>1395</strong> during the reign of King Taejo, the founder of the Joseon Dynasty. It served as the main royal palace for over 500 years and symbolized Korea’s sovereignty.</p>`,
+
+    `<h3>Architecture & Highlights</h3>
+    <p>Explore <strong>Geunjeongjeon Hall</strong> (the throne hall), <strong>Gyeonghoeru Pavilion</strong> built over a scenic pond, and the <strong>National Folk Museum of Korea</strong> located inside the palace grounds.</p>`,
+
+    `<h3>Restoration</h3>
+    <p>Much of the palace was destroyed during the Japanese occupation (1910–1945), but restoration projects have been ongoing since the 1990s, returning its majesty to modern Seoul.</p>`,
+
+    `<h3>Visitor Experience</h3>
+    <p>Witness the <strong>Changing of the Royal Guard Ceremony</strong>, stroll in hanbok, and enjoy stunning views of <em>Bukaksan Mountain</em> as a backdrop.</p>`
+  ]
+},
+
+Changdeokgung: {
+  title: 'Changdeokgung Palace (창덕궁)',
+  sub: 'Harmony with Nature',
+  pages: [
+    `<h3>History</h3>
+    <p>Constructed in <strong>1405</strong> as a secondary palace to Gyeongbokgung, Changdeokgung became the favored royal residence for many Joseon kings due to its natural setting.</p>`,
+
+    `<h3>Secret Garden (Huwon)</h3>
+    <p>The <strong>Huwon</strong>, or Secret Garden, spans 78 acres and showcases Korea’s unique landscape design philosophy — harmony between architecture and nature.</p>`,
+
+    `<h3>UNESCO World Heritage</h3>
+    <p>Designated in 1997 for its outstanding architecture integrated with the surrounding topography. It remains one of the best-preserved palaces in Korea.</p>`,
+
+    `<h3>Highlights</h3>
+    <ul>
+      <li>Buyongji Pond – a peaceful lotus pond</li>
+      <li>Injeongjeon Hall – the throne hall</li>
+      <li>Nakseonjae – elegant residential quarters</li>
+    </ul>`
+  ]
+},
+
+BukchonHanok: {
+  title: 'Bukchon Hanok Village (북촌한옥마을)',
+  sub: 'Traditional neighborhood in the city',
+  pages: [
+    `<h3>Overview</h3>
+    <p>Located between Gyeongbokgung and Changdeokgung, Bukchon is a preserved <strong>Joseon-era residential area</strong> with hundreds of traditional <em>hanok</em> houses still occupied today.</p>`,
+
+    `<h3>Experience</h3>
+    <p>Walk through narrow alleys lined with tiled roofs, wooden beams, and stone walls. Many homes operate as cultural centers, guesthouses, or tea houses.</p>`,
+
+    `<h3>Culture</h3>
+    <p>Bukchon offers hands-on experiences such as hanbok rentals, calligraphy, and traditional craft workshops. The area reflects Seoul’s fusion of old and new.</p>`
+  ]
+},
+
+HwaseongFortress: {
+  title: 'Hwaseong Fortress (수원화성)',
+  sub: 'Majestic 18th-century fortress in Suwon',
+  pages: [
+    `<h3>History</h3>
+    <p>Built between <strong>1794–1796</strong> by King Jeongjo to honor his father, Crown Prince Sado. The fortress surrounds the center of Suwon city and exemplifies late Joseon military engineering.</p>`,
+
+    `<h3>Architecture</h3>
+    <p>Incorporates both Eastern and Western defensive designs — walls, bastions, command posts, and secret gates stretch for nearly <strong>6 km</strong>.</p>`,
+
+    `<h3>UNESCO World Heritage</h3>
+    <p>Designated in 1997 for its innovative use of technology and construction. The fortress symbolizes the king’s filial piety and reformist vision.</p>`,
+
+    `<h3>Attractions</h3>
+    <ul>
+      <li>Hwaseong Haenggung Palace</li>
+      <li>Seojangdae Command Post</li>
+      <li>Hwaseomun and Janganmun Gates</li>
+    </ul>`
+  ]
+},
+
+JongmyoShrine: {
+  title: 'Jongmyo Shrine (종묘)',
+  sub: 'Royal ancestral rites and Confucian heritage',
+  pages: [
+    `<h3>History</h3>
+    <p>Built in <strong>1394</strong>, Jongmyo Shrine enshrines the memorial tablets of Joseon kings and queens. It’s the oldest and most authentic Confucian royal shrine in existence.</p>`,
+
+    `<h3>Jongmyo Jerye</h3>
+    <p>The <strong>Jongmyo Jerye</strong> ceremony — performed annually — includes ancient music and dance preserved since the 15th century. It’s inscribed by UNESCO as <em>Intangible Cultural Heritage</em>.</p>`,
+
+    `<h3>Architecture</h3>
+    <p>Known for its simplicity and solemnity. The long single-story structure symbolizes Confucian values of order and modesty.</p>`,
+
+    `<h3>Visiting</h3>
+    <p>Visitors can witness traditional performances or explore the peaceful courtyards that embody spiritual harmony.</p>`
+  ]
+},
+
+HaeinsaTemple: {
+  title: 'Haeinsa Temple (해인사)',
+  sub: 'Home of the Tripitaka Koreana',
+   fullPageUrl: "pages/haeinsa.html", 
+  pages: [
+    `<h3>History</h3>
+    <p>Founded in <strong>802 AD</strong> during the Silla Dynasty. Haeinsa remains one of Korea’s most important Buddhist temples, located in <em>Gayasan National Park</em>.</p>`,
+
+    `<h3>Tripitaka Koreana</h3>
+    <p>The temple houses over <strong>80,000 wooden printing blocks</strong> of Buddhist scriptures known as the <strong>Tripitaka Koreana</strong>, created in the 13th century. They are renowned for precision and preservation.</p>`,
+
+    `<h3>UNESCO World Heritage</h3>
+    <p>Designated in 1995 for its historical significance and the architectural genius of the <strong>Janggyeong Panjeon</strong> (storage halls) designed to maintain perfect natural humidity control.</p>`,
+
+    `<h3>Spiritual Importance</h3>
+    <p>Still an active temple where monks practice daily meditation. Visitors can join temple stay programs to experience Buddhist life firsthand.</p>`
+  ]
+}
+,
+     Hanbok: {
+  title: 'Hanbok (한복)',
+  sub: "Korea's Traditional Dress",
+  pages: [
+    `<h3>Overview</h3>
+    <p><strong>Hanbok</strong> is Korea’s traditional clothing, worn for centuries by all social classes. It’s characterized by flowing lines, vibrant colors, and natural fabrics like silk and hemp.</p>`,
+
+    `<h3>Structure</h3>
+    <p>The main components are the <strong>jeogori</strong> (jacket), <strong>chima</strong> (skirt) for women, and <strong>baji</strong> (trousers) for men. Accessories include norigae ornaments, belts, and hairpins (binyeo).</p>`,
+
+    `<h3>Symbolism</h3>
+    <p>Colors traditionally represented social status and wishes: red for vitality, blue for hope, yellow for central harmony, and white for purity. Patterns symbolized longevity, wealth, and happiness.</p>`,
+
+    `<h3>Modern Revival</h3>
+    <p>Today, hanbok is worn during holidays and ceremonies but has also inspired <strong>modern hanbok</strong> fashion trends blending traditional silhouettes with contemporary fabrics.</p>`
+  ]
+},
+
+Hanok: {
+  title: 'Hanok (한옥)',
+  sub: 'Traditional Korean House',
+  pages: [
+    `<h3>Design Philosophy</h3>
+    <p><strong>Hanok</strong> houses are built to harmonize with nature, using wood, clay, paper, and stone. Their layout follows <em>pungsu-jiri</em> (Korean geomancy) for balance and energy flow.</p>`,
+
+    `<h3>Key Features</h3>
+    <p>Notable features include <strong>ondol</strong> (underfloor heating system) and <strong>giwa</strong> (tiled roofs). Rooms are separated by sliding paper doors (<em>changhoji</em>) to adjust light and temperature.</p>`,
+
+    `<h3>Cultural Role</h3>
+    <p>Hanok design reflects Confucian family structure — the women’s quarters (<em>anchae</em>) and men’s quarters (<em>sarangchae</em>) were distinct, showing respect and order within the household.</p>`,
+
+    `<h3>Today</h3>
+    <p>Many hanok have been restored as guesthouses, tea houses, and cultural centers in areas like <strong>Bukchon</strong> and <strong>Jeonju Hanok Village</strong>.</p>`
+  ]
+},
+
+TeaCeremony: {
+  title: 'Korean Tea Ceremony (Darye / Dado)',
+  sub: 'Mindful Tea Ritual',
+  pages: [
+    `<h3>Philosophy</h3>
+    <p>The <strong>Tea Ceremony</strong>, known as <em>Darye</em> or <em>Dado</em>, emphasizes calmness, respect, and inner balance. It’s not just about drinking tea — it’s a spiritual practice of hospitality and mindfulness.</p>`,
+
+    `<h3>Tradition</h3>
+    <p>Originating from Buddhist rituals and Confucian etiquette, tea ceremonies became common among scholars and noble families during the Goryeo and Joseon periods.</p>`,
+
+    `<h3>Process</h3>
+    <p>Participants prepare green tea in simple earthenware teacups, appreciating each motion — from boiling water to serving and sipping slowly in silence.</p>`,
+
+    `<h3>Modern Significance</h3>
+    <p>Today, tea ceremonies are performed at cultural events and temples, teaching patience and gratitude in a fast-paced world.</p>`
+  ]
+},
+
+Gugak: {
+  title: 'Gugak (국악)',
+  sub: 'Traditional Korean Music',
+  pages: [
+    `<h3>Overview</h3>
+    <p><strong>Gugak</strong> means “national music” and encompasses traditional Korean sounds — from court and ritual music to folk and contemporary forms.</p>`,
+
+    `<h3>Major Genres</h3>
+    <ul>
+      <li><strong>Pansori</strong> – narrative vocal performance with a drummer</li>
+      <li><strong>Samulnori</strong> – energetic percussion ensemble (four instruments)</li>
+      <li><strong>Sanjo</strong> – instrumental solos with rhythmic variations</li>
+      <li><strong>Jeongak</strong> – refined court and scholarly music</li>
+    </ul>`,
+
+    `<h3>Instruments</h3>
+    <p>Common instruments include the <em>gayageum</em> (12-string zither), <em>daegeum</em> (bamboo flute), <em>janggu</em> (hourglass drum), and <em>haegeum</em> (two-string fiddle).</p>`,
+
+    `<h3>Today</h3>
+    <p>Gugak continues to evolve — blended into fusion genres, films, and even K-pop, showcasing Korea’s living musical heritage.</p>`
+  ]
+},
+
+FolkDance: {
+  title: 'Korean Folk Dance (민속무용)',
+  sub: 'Vibrant Expression of Spirit',
+  pages: [
+    `<h3>Origins</h3>
+    <p>Korean folk dances originated from shamanistic rituals, harvest festivals, and village celebrations, reflecting joy, prayer, and community spirit.</p>`,
+
+    `<h3>Famous Dances</h3>
+    <ul>
+      <li><strong>Buchaechum</strong> – fan dance performed by women in hanbok, symbolizing grace and nature</li>
+      <li><strong>Talchum</strong> – mask dance-drama satirizing social hierarchy</li>
+      <li><strong>Nongak</strong> – farmer’s dance with percussion and acrobatics</li>
+      <li><strong>Seungmu</strong> – Buddhist monk dance of meditation and transcendence</li>
+    </ul>`,
+
+    `<h3>Symbolism</h3>
+    <p>Dances often express cycles of life, seasonal gratitude, and collective identity through rhythm, costume, and movement.</p>`,
+
+    `<h3>Today</h3>
+    <p>These dances are performed at cultural festivals, school programs, and global stages as emblems of Korean artistry.</p>`
+  ]
+},
+
+Calligraphy: {
+  title: 'Korean Calligraphy & Painting (서예와 문인화)',
+  sub: 'The Art of the Brush',
+  pages: [
+    `<h3>Calligraphy (Seoye)</h3>
+    <p><strong>Seoye</strong> — the art of writing with a brush — reflects a person’s inner character and discipline. Korean calligraphy evolved from Chinese influences into unique Hangul-based expressions after the 15th century.</p>`,
+
+    `<h3>Materials</h3>
+    <p>Artists use the <strong>Four Treasures</strong> — brush, ink, inkstone, and paper — to express balance, flow, and spirit through every stroke.</p>`,
+
+    `<h3>Literati Painting (Muninhwa)</h3>
+    <p>Scholarly paintings depicted landscapes, bamboo, or plum blossoms to represent moral virtues and philosophical ideals. The style emphasizes simplicity and emotion over realism.</p>`,
+
+    `<h3>Legacy</h3>
+    <p>Modern Korean artists continue to reinterpret calligraphy and ink painting, blending tradition with abstract expression and design.</p>`
+  ]
+}
+,
+
+      Chuseok: {
+  title: 'Chuseok (추석)',
+  sub: 'Harvest Festival of Gratitude',
+  pages: [
+    `<h3>Overview</h3>
+    <p><strong>Chuseok</strong>, often called Korean Thanksgiving, is one of Korea’s most important traditional holidays. It’s celebrated on the 15th day of the 8th lunar month, marking the harvest moon.</p>`,
+
+    `<h3>Origins</h3>
+    <p>Rooted in ancient harvest celebrations, Chuseok honors ancestors and the abundance of crops. Families gather to thank their forebears and nature for prosperity.</p>`,
+
+    `<h3>Traditions</h3>
+    <ul>
+      <li><strong>Charye</strong> – ancestral memorial rites with food offerings</li>
+      <li><strong>Seongmyo</strong> – visiting and cleaning ancestors’ graves</li>
+      <li><strong>Folk Games</strong> – ganggangsullae (women’s circle dance) and ssireum (Korean wrestling)</li>
+    </ul>`,
+
+    `<h3>Food & Modern Celebration</h3>
+    <p>Families prepare <strong>songpyeon</strong> (half-moon rice cakes filled with sesame or beans), freshly harvested fruits, and traditional dishes. Today, it’s also a time for travel, gifts, and reconnecting with family traditions.</p>`
+  ]
+},
+
+Seollal: {
+  title: 'Seollal (설날)',
+  sub: 'Lunar New Year’s Day',
+  pages: [
+    `<h3>Overview</h3>
+    <p><strong>Seollal</strong> is the first day of the lunar calendar and marks a fresh beginning. It’s celebrated with family gatherings, ancestral rituals, and traditional games.</p>`,
+
+    `<h3>Customs</h3>
+    <ul>
+      <li><strong>Sebae</strong> – deep bow to elders to show respect</li>
+      <li><strong>Charye</strong> – offering food to ancestors for blessings</li>
+      <li><strong>Yutnori</strong> – traditional board game played by families</li>
+    </ul>`,
+
+    `<h3>Food</h3>
+    <p>The most symbolic dish is <strong>tteokguk</strong> – sliced rice cake soup. Eating it signifies gaining a year of wisdom and good fortune. Other foods include jeon (savory pancakes) and galbijjim (braised ribs).</p>`,
+
+    `<h3>Modern Celebration</h3>
+    <p>Many Koreans wear <strong>hanbok</strong>, exchange New Year’s greetings, and travel to their hometowns. Despite modern life, Seollal remains a cherished symbol of respect and family unity.</p>`
+  ]
+},
+
+LotusLantern: {
+  title: 'Lotus Lantern Festival (연등회)',
+  sub: "Celebration of Buddha’s Birthday",
+  pages: [
+    `<h3>Overview</h3>
+    <p>The <strong>Lotus Lantern Festival</strong> (Yeondeunghoe) celebrates the birth of the Buddha on the 8th day of the 4th lunar month. The lotus symbolizes purity, enlightenment, and compassion.</p>`,
+
+    `<h3>History</h3>
+    <p>Originating over a thousand years ago during the Silla Dynasty, the festival was held to illuminate the world with wisdom and kindness. It is one of Korea’s oldest Buddhist celebrations.</p>`,
+
+    `<h3>Festivities</h3>
+    <ul>
+      <li>Massive <strong>lantern parades</strong> with colorful paper lotus lanterns</li>
+      <li><strong>Temple ceremonies</strong> offering prayers and light</li>
+      <li><strong>Cultural events</strong> – making lanterns, meditation, and performances</li>
+    </ul>`,
+
+    `<h3>UNESCO Recognition</h3>
+    <p>In 2020, Yeondeunghoe was inscribed on the <strong>UNESCO Intangible Cultural Heritage</strong> list as a symbol of harmony and inclusivity, bringing people of all faiths together.</p>`
+  ]
+},
+
+Dano: {
+  title: 'Dano (단오)',
+  sub: 'Festival Welcoming Summer',
+  pages: [
+    `<h3>Overview</h3>
+    <p><strong>Dano</strong> is celebrated on the 5th day of the 5th lunar month, marking the beginning of summer. It’s a festival of purification, fertility, and health rooted in shamanistic and agricultural traditions.</p>`,
+
+    `<h3>Traditions</h3>
+    <ul>
+      <li>Washing hair in <strong>changpo (sweet flag) water</strong> for health and beauty</li>
+      <li>Wearing <strong>iris roots</strong> as charms to ward off evil</li>
+      <li><strong>Swing riding</strong> and <strong>ssireum (wrestling)</strong> contests</li>
+    </ul>`,
+
+    `<h3>Food & Customs</h3>
+    <p>People eat <strong>surichwi tteok</strong> (herb rice cakes) and wear colorful ribbons. Farmers prayed for a good harvest and protection from pests and disease.</p>`,
+
+    `<h3>Modern Observance</h3>
+    <p>Dano is still celebrated with cultural performances, traditional clothing, and folk crafts, especially in <strong>Gangneung Danoje</strong>, a UNESCO Intangible Cultural Heritage festival blending Confucian and shamanistic rituals.</p>`
+  ]
+}
+,
+
+      
+    };
+
+    let currentKey=null;let currentPage=0;
+
+    function openDetail(key){
+      const item = summaryData[key];
+      if(!item) return alert('No detail for: '+key);
+      currentKey=key;currentPage=0;
+      detailTitle.innerText = item.title || key;
+      detailSub.innerText = item.sub || '';
+      renderDetail();
+      detailPanel.classList.add('open');
+      detailPanel.setAttribute('aria-hidden','false');
+      document.documentElement.style.overflow='hidden';
+      document.body.style.overflow='hidden';
+      setTimeout(()=>detailBody.focus(),80);
+    }
+
+    function renderDetail(){
+      const item = summaryData[currentKey];
+      const pages = item.pages || [];
+      if(pages.length===0){detailBody.innerHTML='<p>No details</p>';detailPage.innerText='';return}
+      if(currentPage<0) currentPage=0; if(currentPage>pages.length-1) currentPage=pages.length-1;
+      detailBody.innerHTML = pages[currentPage];
+      detailPage.innerText = `Page ${currentPage+1} / ${pages.length}`;
+      prevDetail.disabled = currentPage===0; nextDetail.disabled = currentPage===pages.length-1;
+    }
+
+    prevDetail.addEventListener('click',()=>{ if(!currentKey) return; currentPage=Math.max(0,currentPage-1); renderDetail(); });
+    nextDetail.addEventListener('click',()=>{ if(!currentKey) return; const pages=summaryData[currentKey].pages; currentPage=Math.min(pages.length-1,currentPage+1); renderDetail(); });
+
+    closeDetail.addEventListener('click', closePanel);
+    detailPanel.addEventListener('click',(e)=>{ if(e.target===detailPanel) closePanel(); });
+    document.addEventListener('keydown',(e)=>{ if(detailPanel.classList.contains('open')){ if(e.key==='Escape') closePanel(); if(e.key==='ArrowLeft') prevDetail.click(); if(e.key==='ArrowRight') nextDetail.click(); }});
+
+    function closePanel(){ detailPanel.classList.remove('open'); detailPanel.setAttribute('aria-hidden','true'); document.documentElement.style.overflow=''; document.body.style.overflow=''; currentKey=null; currentPage=0; }
+
+    // Open full page: show the corresponding #page-ID content and scroll to it
+    openFullPage.addEventListener('click',()=>{
+      if(!currentKey) return; closePanel(); const pageId = 'page-'+currentKey; const el = document.getElementById(pageId); if(!el) return alert('Full page not available for '+currentKey);
+      // hide others and show target
+      document.querySelectorAll('.fullpage').forEach(fp=>fp.classList.remove('open'));
+      el.classList.add('open'); el.setAttribute('aria-hidden','false'); // scroll to it
+      setTimeout(()=> el.scrollIntoView({behavior:'smooth',block:'center'}),80);
+    });
+
+    // If user navigates with hash like #detail=Gugak, open that page
+    function handleHash(){ const h=location.hash.replace('#',''); if(!h) return; if(h.startsWith('detail=')){ const key=decodeURIComponent(h.replace('detail=','')); openDetail(key);} if(h.startsWith('page=')){ const key=decodeURIComponent(h.replace('page=','')); const el=document.getElementById('page-'+key); if(el){ document.querySelectorAll('.fullpage').forEach(fp=>fp.classList.remove('open')); el.classList.add('open'); setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'center'}),80);} }}
+    window.addEventListener('hashchange',handleHash); window.addEventListener('load',handleHash);
+
+    // 'Back to top' when clicking outside fullpages
+document.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('fullpage')){
+    // click on background does nothing
+  }
+});
+</script>
+
+<!-- 🏠 Floating Home Icon -->
+<a href="index.html" class="home-icon" title="Back to Home">🏠</a>
+
+</body>
+</html>

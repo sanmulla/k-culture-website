@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🈴 Hangul Harmony — Learn Korean</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* small page-specific styles (keeps your main theme) */
+    .lang-container {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 80vh;
+    }
+
+    .lang-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), #fceef6);
+      border-radius: 18px;
+      padding: 26px;
+      width: 360px;
+      max-width: 92%;
+      box-shadow: 0 8px 30px rgba(178,110,219,0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .hangul {
+      font-size: 48px;
+      color: #5a0076;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .roman {
+      font-size: 18px;
+      color: #7a3f8b;
+      font-weight: 600;
+    }
+
+    .meaning {
+      font-size: 16px;
+      color: #4a004e;
+    }
+
+    .lang-controls {
+      display:flex;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    .lang-controls button, .lang-controls .icon-btn {
+      background: #e9a9e2;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(178,110,219,0.15);
+      transition: transform .15s ease;
+    }
+
+    .lang-controls button:hover, .lang-controls .icon-btn:hover { 
+      transform: translateY(-3px); 
+      background:#c07cf0; 
+    }
+
+    .icon-btn { padding: 10px; min-width:44px; }
+
+    .progress {
+      width: 360px;
+      max-width: 92%;
+      display:flex;
+      justify-content:space-between;
+      font-size:14px;
+      color:#6e4379;
+      margin-bottom: 18px;
+    }
+
+    .word-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+      gap:12px;
+      width: 360px;
+      max-width: 92%;
+      margin-bottom: 24px;
+    }
+
+    .word-pill {
+      background:#fbe3f6;
+      padding:8px 10px;
+      border-radius:12px;
+      text-align:center;
+      cursor:pointer;
+      color:#6a1b9a;
+      font-weight:600;
+      box-shadow: 0 4px 8px rgba(178,110,219,0.08);
+      transition: transform .2s ease;
+    }
+
+    .word-pill:hover { 
+      transform: translateY(-3px); 
+      background:#f3c8ee; 
+    }
+
+    .small-note { color:#6e4379; font-size:13px; margin-bottom:6px; }
+
+    .add-form { 
+      display:flex; 
+      gap:8px; 
+      margin-top:10px; 
+      width:360px; 
+      max-width:92%; 
+    }
+
+    .add-form input { 
+      flex:1; 
+      padding:8px 10px; 
+      border-radius:10px; 
+      border:1px solid #f0cfe9; 
+    }
+
+    .add-form button { 
+      padding:8px 12px; 
+      border-radius:10px; 
+      background:#e9a9e2; 
+      color:white; 
+      border:none; 
+      cursor:pointer; 
+    }
+
+    /* 🌸 Back to Home Box Style */
+    .back-home-box {
+      background: #f9dff8;
+      border-radius: 25px;
+      width: 260px;
+      margin: 40px auto;
+      padding: 25px 20px;
+      box-shadow: 0 6px 18px rgba(203, 120, 238, 0.25);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .back-home-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(203, 120, 238, 0.4);
+    }
+
+    .back-home {
+      background-color: #e48be9;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 17px;
+      box-shadow: 0 4px 12px rgba(203, 120, 238, 0.3);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .back-home:hover {
+      background-color: #d06ae3;
+      transform: scale(1.05);
+    }
+
+    /* responsive tweaks */
+    @media (max-width:420px){
+      .hangul{ font-size:40px; }
+      .lang-card{ width:92%; padding:18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🈴 Hangul Harmony</h1>
+    <p class="subtitle">Learn useful Korean words — see Hangul, romanization, meaning, and hear native pronunciation.</p>
+  </header>
+
+  <main class="lang-container">
+
+    <div class="lang-card" id="lang-card">
+      <div class="hangul" id="hangul">안녕하세요</div>
+      <div class="roman" id="roman">Annyeonghaseyo</div>
+      <div class="meaning" id="meaning">Hello</div>
+
+      <div class="lang-controls">
+        <button id="prevBtn">◀ Prev</button>
+        <button id="playBtn" class="icon-btn">🔊</button>
+        <button id="copyBtn" class="icon-btn">📋</button>
+        <button id="nextBtn">Next ▶</button>
+      </div>
+
+      <div class="progress">
+        <div id="indexText">1 / 10</div>
+        <div id="favText">♡ Favorite</div>
+      </div>
+
+      <div class="small-note">Tap any word below to jump to it quickly</div>
+
+      <div class="word-list" id="wordList"></div>
+
+      <form id="addForm" class="add-form" onsubmit="return addCustomWord(event)">
+        <input id="newHangul" placeholder="Hangul (e.g. 감사합니다)" required>
+        <input id="newRoman" placeholder="Romanization (e.g. Gamsahamnida)" required>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <!-- 🌸 Back to Home Button -->
+    <section class="back-home-box">
+      <a href="index.html" class="back-home">🏡 Back to Home</a>
+    </section>
+
+  </main>
+
+  <script>
+    // Hangul Harmony — words array (update audio filenames if needed)
+    const words = [
+      {hangul:"안녕하세요", roman:"Annyeonghaseyo", meaning:"Hello", audio:"annyeonghaseyo.mp3"},
+      {hangul:"감사합니다", roman:"Gamsahamnida", meaning:"Thank you", audio:"gamsahamnida.mp3"},
+      {hangul:"사랑해요", roman:"Saranghaeyo", meaning:"I love you", audio:"saranghaeyo.mp3"},
+      {hangul:"친구", roman:"Chingu", meaning:"Friend", audio:"chingu.mp3"},
+      {hangul:"행복", roman:"Haengbok", meaning:"Happiness", audio:"haengbok.mp3"},
+      {hangul:"밥", roman:"Bap", meaning:"Cooked rice / meal", audio:"bap.mp3"},
+      {hangul:"물", roman:"Mul", meaning:"Water", audio:"mul.mp3"},
+      {hangul:"맛있다", roman:"Masitda", meaning:"Delicious", audio:"masitda.mp3"},
+      {hangul:"죄송합니다", roman:"Joesonghamnida", meaning:"I'm sorry", audio:"joesonghamnida.mp3"},
+      {hangul:"안녕히 계세요", roman:"Annyeonghi gyeseyo", meaning:"Goodbye (stay well)", audio:"annyeonghi_gyeseyo.mp3"}
+    ];
+
+    let idx = 0;
+    const hangulEl = document.getElementById('hangul');
+    const romanEl = document.getElementById('roman');
+    const meaningEl = document.getElementById('meaning');
+    const indexText = document.getElementById('indexText');
+    const favText = document.getElementById('favText');
+    const wordListEl = document.getElementById('wordList');
+
+    function renderWordPills(){
+      wordListEl.innerHTML = '';
+      words.forEach((w,i) => {
+        const pill = document.createElement('div');
+        pill.className = 'word-pill';
+        pill.innerHTML = `<div style="font-size:16px">${w.hangul}</div><div style="font-size:12px;color:#7a3f8b">${w.roman}</div>`;
+        pill.onclick = ()=> { goTo(i); };
+        wordListEl.appendChild(pill);
+      });
+    }
+
+    function show() {
+      const w = words[idx];
+      hangulEl.textContent = w.hangul;
+      romanEl.textContent = w.roman;
+      meaningEl.textContent = w.meaning;
+      indexText.textContent = (idx+1) + " / " + words.length;
+      favText.textContent = "♡ Favorite";
+      if(w.audio){
+        const a = new Audio(`assets/audio/${w.audio}`);
+        window.currentAudio = a;
+      } else {
+        window.currentAudio = null;
+      }
+    }
+
+    function next() { idx = (idx + 1) % words.length; show(); }
+    function prev() { idx = (idx - 1 + words.length) % words.length; show(); }
+
+    function playAudio(){
+      if(window.currentAudio){
+        window.currentAudio.pause();
+        window.currentAudio.currentTime = 0;
+        window.currentAudio.play().catch(()=>{ alert("Audio file not found."); });
+      } else { alert("No audio for this word."); }
+    }
+
+    function copyCurrent(){
+      const w = words[idx];
+      navigator.clipboard.writeText(`${w.hangul} — ${w.roman} — ${w.meaning}`);
+      alert("Copied: " + w.hangul);
+    }
+
+    function goTo(i){
+      idx = i;
+      show();
+      document.getElementById('lang-card').scrollIntoView({behavior:'smooth', block:'center'});
+    }
+
+    function addCustomWord(e){
+      e.preventDefault();
+      const h = document.getElementById('newHangul').value.trim();
+      const r = document.getElementById('newRoman').value.trim();
+      if(!h || !r) return;
+      words.push({hangul:h, roman:r, meaning:"(user added)", audio:""});
+      renderWordPills();
+      document.getElementById('addForm').reset();
+      goTo(words.length-1);
+    }
+
+    renderWordPills();
+    show();
+    document.getElementById('nextBtn').addEventListener('click', next);
+    document.getElementById('prevBtn').addEventListener('click', prev);
+    document.getElementById('playBtn').addEventListener('click', playAudio);
+    document.getElementById('copyBtn').addEventListener('click', copyCurrent);
+  </script>
+</body>
+</html>

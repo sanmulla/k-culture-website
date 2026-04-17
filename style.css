@@ -1,0 +1,472 @@
+/* 🌸 K-Culture World Theme - Light Purple & Baby Pink 🌸 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  background: linear-gradient(135deg, #f8d7f9, #fcd1e6);
+  color: #4b2c5e;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🌺 Header */
+header h1 {
+  color: #b26edb;
+  font-size: 2rem;
+  margin: 20px 0 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #6e4379;
+  margin-bottom: 40px;
+}
+
+/* 🌸 Buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.btn {
+  background: #e9a9e2;
+  color: white;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(178, 110, 219, 0.3);
+}
+
+.btn:hover {
+  background: #c07cf0;
+  transform: scale(1.05);
+}
+
+/* 🌸 Footer */
+footer {
+  margin-top: auto;
+  font-size: 14px;
+  color: #6e4379;
+  opacity: 0.9;
+  padding: 20px 0;
+}
+
+/* 🍱 Taste of Korea (Food Gallery) */
+.food-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+}
+
+.food-card {
+  background: #fbe3f6;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(178, 110, 219, 0.2);
+  width: 230px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(178, 110, 219, 0.3);
+}
+
+.food-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.food-card h3 {
+  margin-top: 10px;
+  color: #9b59b6;
+}
+
+.food-card p {
+  font-size: 14px;
+  padding: 0 10px 15px;
+  color: #5c3d5e;
+}
+
+/* 🌸 Back Button (Enhanced — Soft Glow & Gradient Style) */
+.back-btn {
+  display: inline-block;
+  margin: 30px auto 60px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #e27cf2, #f3a7e8);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 10px 25px rgba(226, 124, 242, 0.35);
+  transition: all 0.3s ease;
+  animation: floatUpDown 2.8s ease-in-out infinite;
+}
+
+/* Hover Effect */
+.back-btn:hover {
+  background: linear-gradient(135deg, #d160e8, #ed88db);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(209, 96, 232, 0.45);
+}
+
+/* ✨ Floating Animation */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+/* 🌸 Popup Overlay */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 🌸 Popup Box */
+.popup-content {
+  background-color: #fde3f0;
+  border: 2px solid #f8bbd0;
+  border-radius: 20px;
+  width: 85%;
+  max-width: 650px;
+  padding: 30px 35px;
+  color: #5a0076;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: center;
+  margin: 60px auto;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+/* 🌸 Popup Text */
+.popup-content h3,
+.popup-content b {
+  color: #6a1b9a;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.popup-content p,
+.popup-content span {
+  color: #4a004e;
+  font-size: 1rem;
+  margin: 8px 0;
+  width: 85%;
+  text-align: center;
+}
+
+/* 🌸 Close Button */
+.close-btn {
+  color: #e91e63;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ad1457;
+}
+
+/* 🌸 Smooth Scrollbar */
+.popup-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: #e91e63;
+  border-radius: 4px;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 🌸 Back Icon */
+.back-icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 28px;
+  color: white;
+  background-color: #e9a9e2;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(178, 110, 219, 0.3);
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.back-icon:hover {
+  background-color: #c07cf0;
+  transform: scale(1.1);
+}
+
+/* 🎵 K-Pop Section */
+.kpop-section,
+.outfits-section,
+.palaces-section,
+.festivals-section {
+  text-align: center;
+  margin: 60px auto;
+  padding: 40px 0;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 8px 25px rgba(178, 110, 219, 0.2);
+}
+
+.kpop-section {
+  background: linear-gradient(135deg, #ffe1f6, #f7d4ff);
+}
+.outfits-section {
+  background: linear-gradient(135deg, #fff1fa, #f6dbff);
+}
+.palaces-section {
+  background: linear-gradient(135deg, #ffe1f6, #f7d4ff);
+}
+.festivals-section {
+  background: linear-gradient(135deg, #fff2e1, #ffe4d1);
+  box-shadow: 0 8px 25px rgba(255, 182, 87, 0.25);
+}
+
+/* 🖼 Scrollable Cards */
+.kpop-scroll,
+.outfits-scroll,
+.palaces-scroll,
+.festivals-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  padding: 20px 30px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.kpop-scroll::-webkit-scrollbar,
+.outfits-scroll::-webkit-scrollbar,
+.palaces-scroll::-webkit-scrollbar,
+.festivals-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* 💖 Card Style (shared) */
+.kpop-card,
+.outfit-card,
+.palace-card,
+.festival-card {
+  background: #fbe3f6;
+  border-radius: 20px;
+  flex: 0 0 220px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(178, 110, 219, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.kpop-card:hover,
+.outfit-card:hover,
+.palace-card:hover,
+.festival-card:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 10px 25px rgba(178, 110, 219, 0.4);
+}
+
+.kpop-card img,
+.outfit-card img,
+.palace-card img,
+.festival-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/* 🎨 Section Titles */
+.kpop-section h2,
+.outfits-section h2,
+.palaces-section h2,
+.festivals-section h2 {
+  font-size: 2rem;
+  color: #7c1ca1;
+  margin-bottom: 10px;
+}
+
+.kpop-section .subtitle,
+.outfits-section .subtitle,
+.palaces-section .subtitle,
+.festivals-section .subtitle {
+  font-size: 1.1rem;
+  color: #5b2974;
+  margin-bottom: 40px;
+}
+
+/* 💜 Card Titles */
+.kpop-card h3,
+.outfit-card h3,
+.palace-card h3,
+.festival-card h3 {
+  color: #9b59b6;
+  margin: 12px 0 15px;
+  font-weight: 700;
+}
+/* 🌸 Traditional Foundations Section */
+.tradition-section {
+  text-align: center;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #ffe1f6, #f7d4ff);
+  padding: 40px 0;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 8px 25px rgba(178, 110, 219, 0.2);
+}
+
+/* Section Titles */
+.tradition-section h2 {
+  font-size: 2rem;
+  color: #7c1ca1;
+  margin-bottom: 10px;
+}
+
+.tradition-section .intro {
+  color: #5b2974;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Scrollable Cards */
+.tradition-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  padding: 20px 30px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.tradition-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Cards */
+.tradition-card {
+  background: #fbe3f6;
+  border-radius: 20px;
+  flex: 0 0 250px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(178, 110, 219, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tradition-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(178, 110, 219, 0.4);
+}
+
+/* Card Image */
+.tradition-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Card Text */
+.tradition-card h3 {
+  color: #9b59b6;
+  margin: 12px 0 10px;
+  font-weight: 700;
+}
+
+.tradition-card p {
+  color: #5c3d5e;
+  font-size: 0.95rem;
+  padding: 0 10px 20px;
+  line-height: 1.5;
+}
+
+/* Divider Between Subsections */
+.divider {
+  width: 70%;
+  border: none;
+  border-top: 2px dashed #e2b3f3;
+  margin: 40px auto;
+}
+.back-to-home {
+  display: inline-block;
+  margin: 40px auto 60px;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, #fcb7e1, #d8a7f9);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+  background: linear-gradient(135deg, #d8a7f9, #fcb7e1);
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+/* 🏡 Floating Home Icon */
+.home-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #e9a9e2;
+  color: white;
+  font-size: 28px;
+  padding: 14px 18px;
+  border-radius: 50%;
+  box-shadow: 0 8px 18px rgba(178, 110, 219, 0.3);
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 9999; /* ensure it’s on top of everything */
+  text-decoration: none;
+}
+
+.home-icon:hover {
+  background-color: #c07cf0;
+  transform: scale(1.1);
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste of Korea</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍱 Taste of Korea</h1>
+    <p class="subtitle">Discover the rich flavors of Korean cuisine — from traditional meals to modern street food!</p>
+  </header>
+
+  <div class="food-gallery">
+
+    <!-- RICE DISHES -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="Bibimbap (비빔밥)"
+     data-description="
+🏮 History:
+Bibimbap, meaning 'mixed rice', is believed to have originated from communal farming meals during the late Joseon Dynasty (1392–1897). Farmers would combine leftover side dishes with rice into one bowl for convenience, creating a nutritious and colorful dish that reflected Korean practicality and creativity.
+
+📍 Origin:
+The city of Jeonju is often recognized as the birthplace of authentic bibimbap. Jeonju’s version is known for its fresh vegetables, sesame oil aroma, and perfectly seasoned gochujang (chili paste). Other regions such as Jinju and Tongyeong have their own variations, each showing local character.
+
+🪷 Evolution:
+Over time, bibimbap evolved from a farmer’s dish to a royal delicacy served in the Joseon court. Today, it has transformed into a global icon of Korean cuisine, often customized with beef, seafood, or tofu to fit modern tastes.
+
+🌈 Symbolism:
+Every ingredient in bibimbap represents one of the five elements in Korean philosophy — wood, fire, earth, metal, and water — and the colors reflect balance in health and nature: yellow (earth), green (wood), red (fire), white (metal), and black (water).
+
+💫 Modern Popularity:
+Bibimbap is now served worldwide as a symbol of harmony, health, and balance. It’s even featured on Korean Air’s international flights and in Michelin-starred restaurants. Its beauty lies not only in taste but in philosophy — blending diversity into unity, just like Korea’s cultural spirit. 
+">
+  <img src="assets/images/bibimbap.jpg" alt="Bibimbap">
+  <h3>비빔밥 (Bibimbap)</h3>
+  <p>Rice mixed with veggies and chili paste.</p>
+</div>
+
+   <div class="food-card" onclick="showInfo(this)"
+     data-name="김치볶음밥 (Kimchi Bokkeumbap)"
+     data-description="
+🏮 History:
+Kimchi Bokkeumbap, or Kimchi Fried Rice, became popular after the Korean War when rice and kimchi were among the few ingredients easily available. It symbolizes Korean creativity in making simple ingredients delicious.
+
+📍 Origin:
+This dish began in humble homes — people mixed day-old rice with spicy kimchi and sesame oil for a quick, hearty meal. It’s usually topped with a fried egg, giving it both flavor and comfort.
+
+🪷 Evolution:
+Over time, this everyday dish grew into a restaurant favorite. Modern versions include cheese, spam, or even seafood, showing Korea’s ability to blend old and new.
+
+🌈 Symbolism:
+It represents resourcefulness and the warmth of home — turning leftovers into a joyful meal shared with family and friends.
+
+💫 Modern Popularity:
+Now a favorite in K-dramas and K-pop idols’ vlogs, Kimchi Bokkeumbap is loved worldwide for its spicy kick and homely comfort. It’s a perfect example of Korean comfort food with heart. ❤️
+">
+  <img src="assets/images/kimchi_fried_rice.jpg" alt="Kimchi Bokkeumbap">
+  <h3>김치볶음밥 (Kimchi Bokkeumbap)</h3>
+  <p>Fried rice with kimchi and egg — simple yet full of flavor.</p>
+</div>
+
+<div class="food-card" onclick="showInfo(this)"
+     data-name="김밥 (Kimbap)"
+     data-description="
+🏮 History:
+Kimbap originated in the early 1900s, influenced by Japanese sushi rolls, but it quickly became uniquely Korean — filled with cooked ingredients, sesame oil, and bright colors.
+
+📍 Origin:
+The name ‘kimbap’ comes from ‘gim’ (seaweed) and ‘bap’ (rice). It’s made by rolling rice and fillings such as carrots, eggs, spinach, and pickled radish into seaweed.
+
+🪷 Evolution:
+From picnics to lunchboxes, Kimbap became the symbol of family outings and care. Over time, creative versions emerged — like tuna, bulgogi, and even vegan kimbap.
+
+🌈 Symbolism:
+Each colorful ingredient reflects harmony and togetherness — a celebration of Korean family values and balance.
+
+💫 Modern Popularity:
+Today, Kimbap is a global Korean snack found in cafés and street stalls. Easy to carry, healthy, and delicious — it represents Korean simplicity and beauty rolled into one bite. 🍙
+">
+  <img src="assets/images/kimbap.jpg" alt="Kimbap">
+  <h3>김밥 (Kimbap)</h3>
+  <p>Rice and fillings rolled in seaweed — Korea’s favorite snack.</p>
+</div>
+
+    <!-- SOUPS -->
+    <!-- 김치찌개 (Kimchi Jjigae) -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="김치찌개 (Kimchi Jjigae)"
+     data-description="
+🏮 History:
+Kimchi Jjigae, or Kimchi Stew, is one of Korea’s most iconic comfort foods. It originated during times when kimchi became too sour to eat raw — people simmered it with pork, tofu, and gochujang to create a rich, spicy flavor.
+
+📍 Origin:
+It was a humble home dish that evolved from Korea’s long-standing tradition of fermentation. During the post-war era, households often cooked it using simple ingredients like canned meat and leftover kimchi.
+
+🪷 Evolution:
+Today, there are many versions — pork kimchi jjigae, tuna kimchi jjigae, and even vegan styles. Each reflects the home’s personality and region’s taste.
+
+🌈 Symbolism:
+The stew’s deep red color represents warmth, resilience, and Korea’s fighting spirit — a dish that turns sour moments into something rich and beautiful.
+
+💫 Modern Popularity:
+It’s served in homes, diners, and even luxury restaurants. Kimchi Jjigae symbolizes Korean togetherness — best enjoyed bubbling in the center of the table. 🍲
+">
+  <img src="assets/images/kimchi_jjigae.jpg" alt="Kimchi Jjigae">
+  <h3>김치찌개 (Kimchi Jjigae)</h3>
+  <p>Spicy kimchi stew with tofu and pork — warm and comforting.</p>
+</div>
+
+<!-- 순두부찌개 (Sundubu Jjigae) -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="순두부찌개 (Sundubu Jjigae)"
+     data-description="
+🏮 History:
+Sundubu Jjigae means ‘soft tofu stew’ and traces its roots to ancient tofu-making villages. The word ‘sundubu’ refers to unpressed, silky tofu, prized for its delicate texture.
+
+📍 Origin:
+It originated in coastal regions where fresh tofu was combined with clams, seafood, and gochugaru (red chili flakes). The dish was loved for its rich broth and protein-packed comfort.
+
+🪷 Evolution:
+Sundubu Jjigae gained global fame after the 1990s Korean Wave — now served with a raw egg cracked on top in sizzling stone bowls.
+
+🌈 Symbolism:
+Its balance of soft and spicy reflects Korean philosophy — gentleness with strength.
+
+💫 Modern Popularity:
+Sundubu Jjigae restaurants are now found worldwide, offering a taste of Korean warmth to all who crave something cozy and soulful. ❤️
+">
+  <img src="assets/images/sundubu_jjigae.jpg" alt="Sundubu Jjigae">
+  <h3>순두부찌개 (Sundubu Jjigae)</h3>
+  <p>Soft tofu stew with seafood — spicy and silky smooth.</p>
+</div>
+
+<!-- 삼계탕 (Samgyetang) -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="삼계탕 (Samgyetang)"
+     data-description="
+🏮 History:
+Samgyetang, or Ginseng Chicken Soup, has been enjoyed for centuries as a health-boosting dish, particularly during Korea’s hottest summer days (‘boknal’).
+
+📍 Origin:
+It originated in royal cuisine, where whole young chickens were stuffed with glutinous rice, ginseng, jujube, and garlic — a nourishing meal for vitality.
+
+🪷 Evolution:
+It evolved from earlier versions of ‘Yeongye-tang’ during the Joseon era, now simplified and loved by everyone from elders to K-pop idols.
+
+🌈 Symbolism:
+It represents harmony between nature and body — hot food restoring inner energy (yin and yang balance).
+
+💫 Modern Popularity:
+Samgyetang remains a symbol of wellness and tradition — tourists line up in Seoul’s Samgyetang alley to enjoy it fresh from stone pots. 🍗
+">
+  <img src="assets/images/samgyetang.jpg" alt="Samgyetang">
+  <h3>삼계탕 (Samgyetang)</h3>
+  <p>Ginseng chicken soup — a summer health booster.</p>
+</div>
+
+     
+    <!-- NOODLES -->
+   <!-- 잡채 (Japchae) -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="잡채 (Japchae)"
+     data-description="
+🏮 History:
+Japchae, meaning 'mixed vegetables,' was first created in the early 1600s for King Gwanghaegun. It originally contained no noodles — just vegetables seasoned with soy sauce and sesame oil.
+
+📍 Origin:
+It later evolved to include glass noodles made from sweet potato starch, creating the glossy and chewy texture loved today.
+
+🪷 Evolution:
+Japchae became a festive dish for holidays like Chuseok and Lunar New Year, symbolizing abundance and unity.
+
+🌈 Symbolism:
+Its long noodles represent longevity, and its mix of colors shows harmony and prosperity.
+
+💫 Modern Popularity:
+Japchae is now served both as a side and a main dish in Korean restaurants worldwide — light, balanced, and beautiful. 🍜
+">
+  <img src="assets/images/japchae.jpg" alt="Japchae">
+  <h3>잡채 (Japchae)</h3>
+  <p>Stir-fried glass noodles with vegetables and soy flavor.</p>
+</div>
+
+<!-- 냉면 (Naengmyeon) -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="냉면 (Naengmyeon)"
+     data-description="
+🏮 History:
+Naengmyeon, or ‘cold noodles,’ originated in North Korea, particularly Pyongyang and Hamhung, as a winter dish eaten from icy wells.
+
+📍 Origin:
+It was made from buckwheat noodles served in chilled beef broth, often garnished with cucumber, pear, and boiled egg.
+
+🪷 Evolution:
+After the Korean War, it spread south and became a summer favorite across Korea.
+
+🌈 Symbolism:
+Naengmyeon represents coolness, clarity, and nostalgia for one’s homeland.
+
+💫 Modern Popularity:
+Now, it’s a must-try dish for summer, offering refreshing balance after spicy meals. 🧊
+">
+  <img src="assets/images/naengmyeon.jpg" alt="Naengmyeon">
+  <h3>냉면 (Naengmyeon)</h3>
+  <p>Cold buckwheat noodles served in icy broth — refreshing!</p>
+</div>
+
+    <!-- MEAT -->
+    <!-- MEAT DISHES -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="불고기 (Bulgogi)"
+     data-description="
+🏮 History:
+Bulgogi, meaning ‘fire meat’, dates back to the Goguryeo Dynasty (37 BC–668 AD), when marinated beef was grilled over open flames as a luxury dish for nobles. 
+
+📍 Origin:
+Originating in northern Korea, bulgogi was once called ‘maekjeok’. Over time, it evolved into thinly sliced, marinated beef cooked on iron grills, symbolizing abundance and hospitality. 
+
+🪷 Evolution:
+Today, it’s often cooked on tabletop grills at family gatherings — served with lettuce, rice, and kimchi. 
+
+🌈 Symbolism:
+The sweetness of pear and soy marinade represents harmony and balance — a perfect blend of flavors and emotions. 
+
+💫 Modern Popularity: 
+Bulgogi is now a global ambassador of Korean BBQ, loved for its tenderness and umami-rich glaze. 
+">
+  <img src="assets/images/bulgogi.jpg" alt="Bulgogi">
+  <h3>불고기 (Bulgogi)</h3>
+  <p>Sweet and savory grilled beef marinated in soy and garlic.</p>
+</div>
+
+<div class="food-card" onclick="showInfo(this)"
+     data-name="갈비 (Galbi)"
+     data-description="
+🏮 History:
+Galbi, or Korean short ribs, became popular during the Joseon Dynasty as a royal meat dish. It represents the artistry of Korean marination and grilling. 
+
+📍 Origin:
+Originally made from beef ribs, galbi was later adapted with pork in different regions such as Gyeonggi and Jeolla. 
+
+🪷 Evolution:
+Grilled over charcoal, galbi’s smoky aroma became the hallmark of Korean BBQ culture. 
+
+🌈 Symbolism:
+Galbi embodies unity — pieces of meat shared around the same grill, symbolizing family connection. 
+
+💫 Modern Popularity:
+From Seoul’s BBQ streets to global Korean restaurants, galbi continues to represent the warmth of Korean hospitality.
+">
+  <img src="assets/images/galbi.jpg" alt="Galbi">
+  <h3>갈비 (Galbi)</h3>
+  <p>Grilled short ribs — tender and delicious Korean BBQ.</p>
+</div>
+
+<div class="food-card" onclick="showInfo(this)"
+     data-name="닭갈비 (Dakgalbi)"
+     data-description="
+🏮 History:
+Dakgalbi originated in Chuncheon during the 1960s as an affordable yet hearty dish for soldiers and students. 
+
+📍 Origin:
+The word 'dak' means chicken and 'galbi' means ribs — symbolizing grilled meat for the common people. 
+
+🪷 Evolution:
+It evolved from street food into a celebrated communal meal, where everyone shares spicy stir-fried chicken at the same table. 
+
+🌈 Symbolism:
+Dakgalbi’s fiery red color represents passion, youth, and friendship. 
+
+💫 Modern Popularity:
+Chuncheon remains the “home of Dakgalbi,” with entire streets dedicated to this spicy delight.
+">
+  <img src="assets/images/dakgalbi.jpg" alt="Dakgalbi">
+  <h3>닭갈비 (Dakgalbi)</h3>
+  <p>Spicy stir-fried chicken with rice cakes and cabbage.</p>
+</div>
+
+<!-- STREET FOOD -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="떡볶이 (Tteokbokki)"
+     data-description="
+🏮 History:
+Tteokbokki traces back to the royal courts of the Joseon Dynasty, originally made with soy sauce. The spicy red version emerged in the 1950s. 
+
+📍 Origin:
+Developed by a Seoul street vendor named Ma Bok-rim, who added gochujang to rice cakes, creating Korea’s favorite street snack. 
+
+🪷 Evolution:
+From its humble beginnings, Tteokbokki evolved from a royal delicacy to an everyday comfort food. Over decades, new variations appeared — cheese tteokbokki, cream tteokbokki, and even rose tteokbokki — reflecting modern Korean creativity and fusion flavors.
+
+🌈 Symbolism:
+Its chewy rice cakes and spicy sauce symbolize resilience and energy — especially loved by students. 
+
+💫 Modern Popularity:
+You’ll find Tteokbokki everywhere — from school streets to fancy cafes — a taste of nostalgia and fun.
+">
+  <img src="assets/images/tteokbokki.jpg" alt="Tteokbokki">
+  <h3>떡볶이 (Tteokbokki)</h3>
+  <p>Soft rice cakes in a spicy gochujang sauce — street favorite!</p>
+</div>
+
+<div class="food-card" onclick="showInfo(this)"
+     data-name="호떡 (Hotteok)"
+     data-description="
+🏮 History:
+Hotteok came from Chinese merchants in the early 1900s and was adapted into a beloved Korean winter street snack. 
+
+📍 Origin:
+The filling — brown sugar, cinnamon, and nuts — reflects Korean creativity in turning foreign food into local comfort. 
+
+🪷 Evolution:
+Over time, Hotteok evolved from a street food to a seasonal favorite sold in modern markets and cafes. Variants like matcha, Nutella, and honey butter show how tradition blends with innovation.
+
+🌈 Symbolism:
+Hotteok represents warmth and kindness — shared in cold weather among friends and strangers alike. 
+
+💫 Modern Popularity:
+Now available in various flavors like green tea, Nutella, and honey butter, Hotteok continues to sweeten Korean streets.
+">
+  <img src="assets/images/hotteok.jpg" alt="Hotteok">
+  <h3>호떡 (Hotteok)</h3>
+  <p>Sweet syrup-filled pancakes — crispy outside, soft inside.</p>
+</div>
+
+<div class="food-card" onclick="showInfo(this)"
+     data-name="핫도그 (Hotdog)"
+     data-description="
+🏮 History:
+Korean Corn Dogs evolved from Western-style hotdogs, first popularized in the 1980s. 
+
+📍 Origin:
+Vendors in Myeongdong began experimenting with rice flour batter and sugar coating — creating a unique Korean twist. 
+
+🪷 Evolution:
+From a simple fairground snack, the Korean corn dog became a social media sensation. Variations like mozzarella-filled, potato-crusted, and squid-ink corn dogs reflect the playful spirit of K-food innovation.
+
+🌈 Symbolism:
+The mix of sweet and savory reflects Korea’s spirit of fusion and creativity. 
+
+💫 Modern Popularity:
+Now viral on social media, Korean corn dogs with cheese pulls are enjoyed worldwide — a delicious representation of modern K-culture.
+">
+  <img src="assets/images/corndog.jpg" alt="Corn Dog">
+  <h3>핫도그 (Hotdog)</h3>
+  <p>Korean street-style hot dog with crispy batter and cheese.</p>
+</div>
+
+<!-- SIDE DISHES -->
+<div class="food-card" onclick="showInfo(this)"
+     data-name="김치 (Kimchi)"
+     data-description="
+🏮 History:
+Kimchi’s origins date back over 2,000 years to ancient fermentation traditions. 
+
+📍 Origin:
+Originally pickled in salt water, chili peppers were added during the 17th century, creating the spicy flavor we know today. 
+
+🪷 Evolution:
+Kimchi evolved from simple radish pickles to hundreds of regional varieties — including Baechu Kimchi, Kkakdugi, and Nabak Kimchi — each preserving local identity and seasonal ingredients. It became a symbol of resilience and adaptation through history.
+
+🌈 Symbolism:
+Kimchi represents endurance, transformation, and health — Korea’s most sacred dish. 
+
+💫 Modern Popularity:
+It’s served at every Korean meal and recognized globally as a superfood rich in probiotics.
+">
+  <img src="assets/images/kimchi.jpg" alt="Kimchi">
+  <h3>김치 (Kimchi)</h3>
+  <p>Spicy fermented cabbage — Korea’s heart and soul dish.</p>
+</div>
+
+<div class="food-card" onclick="showInfo(this)"
+     data-name="파전 (Pajeon)"
+     data-description="
+🏮 History:
+Pajeon, or green onion pancake, dates back to the Goryeo Dynasty and was often enjoyed during rainy days. 
+
+📍 Origin:
+The dish is believed to have originated in the southern coastal regions of Korea, where green onions were plentiful and fresh seafood was easy to find. Over time, regions like Busan’s Dongnae district made Pajeon famous with their Dongnae Pajeon — a richer version topped with seafood, eggs, and chili peppers, which was even offered to the Joseon royal court. 
+
+🪷 Evolution:
+From humble countryside kitchens, Pajeon evolved into a social food — shared in makgeolli bars and homes. Regional styles like Haemul Pajeon (seafood) and Dongnae Pajeon showcase how this dish adapted to Korea’s diverse landscapes and ingredients.
+
+🌈 Symbolism:
+Eating Pajeon with makgeolli (rice wine) in the rain became a Korean cultural tradition — symbolizing relaxation and warmth. 
+
+💫 Modern Popularity:
+It’s now a favorite comfort food, often shared with friends in cozy restaurants or markets.
+">
+  <img src="assets/images/pajeon.jpg" alt="Pajeon">
+  <h3>파전 (Pajeon)</h3>
+  <p>Savory green onion pancake — crispy and delicious.</p>
+</div>
+
+<div class="food-card" onclick="showInfo(this)"
+     data-name="만두 (Mandu)"
+     data-description="
+🏮 History:
+Mandu, Korean dumplings, were introduced from China during the Goryeo Dynasty. 
+
+📍 Origin:
+Originally eaten by royal families, mandu later became common at New Year’s celebrations as a symbol of prosperity. 
+
+🪷 Evolution:
+Mandu transformed from a royal delicacy into an everyday meal, appearing in countless styles — steamed, pan-fried, or boiled. Fillings evolved to include kimchi, tofu, and glass noodles, reflecting Korea’s creativity and family traditions.
+
+🌈 Symbolism:
+Their crescent shape resembles old Korean coins — representing wealth and good fortune. 
+
+💫 Modern Popularity:
+From steamed to fried, mandu remains a Korean favorite — comforting, versatile, and filled with love.
+">
+  <img src="assets/images/mandu.jpg" alt="Mandu">
+  <h3>만두 (Mandu)</h3>
+  <p>Korean dumplings filled with vegetables or meat.</p>
+</div>
+
+
+ <div class="food-gallery">
+  <!-- all your food cards (Bibimbap, Kimchi, Mandu, etc.) -->
+</div>
+
+<!-- ✅ move the button here -->
+<div class="back-home-container">
+  <a href="index.html" class="back-btn">🏠 Back to Home</a>
+
+</div>
+<!-- Popup Box -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2 id="popup-title"></h2>
+    <p id="popup-text"></p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
